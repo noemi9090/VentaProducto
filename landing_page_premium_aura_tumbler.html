@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Tumbler - El Termo Inteligente que Redefine tu Rutina</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans para un look moderno y premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons para iconos limpios -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fbf8f5',
+                            100: '#f6eedf',
+                            200: '#ebdcc3',
+                            500: '#c5a880',
+                            800: '#634e34',
+                            900: '#3e301e',
+                            accent: '#e28743'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- BARRA DE ANUNCIO (Urgencia & Conversión) -->
+    <div class="bg-brand-900 text-brand-100 py-2 px-4 text-center text-xs md:text-sm font-semibold tracking-wide flex items-center justify-center gap-2">
+        <span class="inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+        <span>OFERTA DE LANZAMIENTO: 40% OFF + Envío Gratis hoy</span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline text-brand-200">Quedan pocas unidades</span>
+    </div>
+
+    <!-- NAVBAR HEADER -->
+    <header class="sticky top-0 z-50 glass border-b border-brand-200/40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-brand-900">
+                <span class="bg-brand-800 text-white p-1.5 rounded-xl shadow-md">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </span>
+                Aura<span class="text-brand-500 font-light">Mug</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#beneficios" class="hover:text-brand-800 transition-colors">Beneficios</a>
+                <a href="#personalizar" class="hover:text-brand-800 transition-colors">Personalizar</a>
+                <a href="#testimonios" class="hover:text-brand-800 transition-colors">Opiniones</a>
+                <a href="#faq" class="hover:text-brand-800 transition-colors">Preguntas Frecuentes</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="flex items-center gap-4">
+                <a href="#comprar" class="bg-brand-900 hover:bg-brand-800 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] shadow-md hover:shadow-lg flex items-center gap-2">
+                    Solicitar Ahora
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Atención) -->
+    <section class="relative pt-10 pb-20 md:py-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Text (Cialdini: Autoridad y Aspiración) -->
+            <div class="lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-brand-100 border border-brand-200 px-3 py-1.5 rounded-full text-brand-800 text-xs font-bold tracking-wider uppercase self-center lg:self-start shadow-sm">
+                    <i data-lucide="award" class="w-4 h-4 text-brand-500"></i> El termo más viral de 2026
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                    Tu bebida a la temperatura <span class="relative inline-block text-brand-800">
+                        perfecta.
+                        <span class="absolute bottom-1 left-0 w-full h-2.5 bg-brand-200/70 -z-10 rounded-full"></span>
+                    </span>
+                    Todo el día.
+                </h1>
+                
+                <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Diseñado para mentes activas. Aura Tumbler combina un diseño estético impecable con control térmico inteligente para que tu matcha, café o agua mantengan su esencia desde el primer sorbo hasta el último.
+                </p>
+
+                <!-- Beneficios rápidos en iconos -->
+                <div class="grid grid-cols-3 gap-4 pt-4 max-w-md mx-auto lg:mx-0 text-left">
+                    <div class="flex items-center gap-2">
+                        <div class="p-1.5 bg-emerald-100 text-emerald-800 rounded-lg"><i data-lucide="clock" class="w-4 h-4"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">24h Frío</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="p-1.5 bg-amber-100 text-amber-800 rounded-lg"><i data-lucide="flame" class="w-4 h-4"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">12h Caliente</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="p-1.5 bg-indigo-100 text-indigo-800 rounded-lg"><i data-lucide="droplet" class="w-4 h-4"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">100% Hermético</span>
+                    </div>
+                </div>
+
+                <!-- CTAs Principales (Urgencia implícita) -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-6">
+                    <a href="#comprar" class="w-full sm:w-auto bg-brand-900 hover:bg-brand-800 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center flex items-center justify-center gap-3 transform hover:-translate-y-0.5">
+                        Quiero mi Aura Tumbler
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#beneficios" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-semibold text-lg px-8 py-4 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300 text-center flex items-center justify-center gap-2">
+                        Ver cómo funciona
+                    </a>
+                </div>
+
+                <!-- Social Proof inmediato bajo el botón de compra -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-6 text-sm text-slate-500">
+                    <div class="flex -space-x-2">
+                        <img class="w-9 h-9 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Usuario 1">
+                        <img class="w-9 h-9 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Usuario 2">
+                        <img class="w-9 h-9 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Usuario 3">
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <span class="font-bold text-slate-800">4.9/5 Estrellas</span> por más de <span class="font-bold text-brand-800">14,200+ clientes</span> en LATAM
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image / Visual Mockup (Deseo y Calidad) -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <!-- Círculos decorativos de fondo de marca -->
+                <div class="absolute w-72 h-72 md:w-96 md:h-96 rounded-full bg-brand-200/50 blur-3xl -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                
+                <!-- Contenedor del producto interactivo -->
+                <div class="relative w-full max-w-[360px] aspect-[4/5] bg-gradient-to-tr from-brand-100 to-white rounded-[2.5rem] p-8 shadow-2xl border border-white/60 animate-float flex flex-col justify-between items-center overflow-hidden">
+                    
+                    <!-- Badge superior -->
+                    <div class="w-full flex justify-between items-center">
+                        <span class="text-xs font-bold text-brand-800 bg-brand-200/60 px-3 py-1 rounded-full">Edición Limitada</span>
+                        <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i> 4.9
+                        </div>
+                    </div>
+
+                    <!-- Representación del producto (Aura Tumbler en SVG para carga instantánea y cambio de color dinámico) -->
+                    <div class="relative my-6 w-44 h-72 flex items-center justify-center">
+                        <svg id="hero-svg-tumbler" class="w-full h-full drop-shadow-2xl transition-all duration-700" viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Tapa del termo -->
+                            <rect x="55" y="10" width="90" height="25" rx="8" fill="#1e293b" />
+                            <rect x="65" y="35" width="70" height="15" fill="#475569" />
+                            <circle cx="100" cy="22.5" r="5" fill="#f8fafc" />
+                            <!-- Cuerpo del termo con color dinámico -->
+                            <path id="tumbler-body" d="M50 50 H150 L140 280 C138 295, 128 305, 115 305 H85 C72 305, 62 295, 60 280 L50 50 Z" fill="#c5a880" class="transition-all duration-500" />
+                            <!-- Detalle de marca en el termo -->
+                            <text x="100" y="180" fill="white" font-family="Plus Jakarta Sans" font-weight="bold" font-size="14" text-anchor="middle" letter-spacing="3" opacity="0.8">AURA</text>
+                            <!-- Indicador de temperatura digital (Pantalla táctil) -->
+                            <rect x="75" y="70" width="50" height="22" rx="6" fill="#0f172a" />
+                            <text id="tumbler-temp" x="100" y="86" fill="#34d399" font-family="monospace" font-weight="bold" font-size="12" text-anchor="middle">55°C</text>
+                        </svg>
+                    </div>
+
+                    <!-- Texto dinámico del color seleccionado -->
+                    <div class="text-center">
+                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Aura Inteligente</p>
+                        <h3 id="hero-color-title" class="text-lg font-bold text-slate-800">Matcha Milk</h3>
+                    </div>
+                </div>
+
+                <!-- Floating Card 1: Control de temperatura en vivo -->
+                <div class="absolute -right-4 top-1/4 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[180px]">
+                    <div class="bg-red-50 text-red-500 p-2 rounded-xl">
+                        <i data-lucide="thermometer" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase">Temperatura</p>
+                        <p class="text-sm font-extrabold text-slate-800">Táctil Inteligente</p>
+                    </div>
+                </div>
+
+                <!-- Floating Card 2: Cero derrames -->
+                <div class="absolute -left-6 bottom-10 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[180px]">
+                    <div class="bg-blue-50 text-blue-500 p-2 rounded-xl">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase">Tecnología</p>
+                        <p class="text-sm font-extrabold text-slate-800">Anti-Derrames</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BANNER SOCIAL PROOF LOGOS -->
+    <div class="bg-white border-y border-brand-200/40 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs uppercase font-extrabold tracking-widest text-slate-400 mb-6">Mencionado en las mejores revistas de estilo y tecnología</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all">
+                <span class="text-lg font-extrabold tracking-wider text-slate-700">VOGUE</span>
+                <span class="text-lg font-extrabold tracking-wider text-slate-700">GQ MAGAZINE</span>
+                <span class="text-lg font-extrabold tracking-wider text-slate-700">WIRED</span>
+                <span class="text-lg font-extrabold tracking-wider text-slate-700">FORBES</span>
+                <span class="text-lg font-extrabold tracking-wider text-slate-700">COSMO</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE BENEFICIOS (Interés) -->
+    <section id="beneficios" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-800 bg-brand-100 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Por qué elegir Aura</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">Diseño estético cargado de innovación que vas a querer presumir</h2>
+                <p class="text-slate-600 mt-4">No es un termo común. Es un accesorio diseñado para elevar tus espacios, mejorar tu hidratación y asegurar que cada trago esté delicioso.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1: Sensor de Temp -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sensor Térmico Inteligente</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Toca dos veces la pantalla OLED integrada en la tapa para conocer la temperatura exacta de tu bebida en tiempo real. Se acabó quemarse la lengua por sorpresa.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2: Aislante Triple Capa -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+                        <i data-lucide="snowflake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Aislamiento al Vacío</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Gracias a su tecnología de triple pared de acero inoxidable grado médico, mantiene el hielo intacto por 24 horas y el calor abrasador hasta por 12 horas.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3: Carga Magnética -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6">
+                        <i data-lucide="battery-charging" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Batería de Larga Duración</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        La tapa inteligente se carga magnéticamente en solo 1 hora y te proporciona hasta 30 días de autonomía de uso diario continuo. Cable magnético incluido.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 4: Sin Condensación -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Exterior Anti-Sudor</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        El recubrimiento de pintura al horno de alta resistencia evita la condensación externa. Tus manos, escritorios y bolsos se mantendrán completamente secos.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 5: 100% Ecológico -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center mb-6">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Libre de BPA y Toxinas</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Fabricado de forma ética con materiales 100% reciclables y seguros para tu salud. Di adiós a los plásticos de un solo uso con estilo y elegancia.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 6: Alarma de Hidratación -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-6">
+                        <i data-lucide="bell" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Alerta de Hidratación</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Programa vibraciones sutiles opcionales en la tapa para recordarte beber agua cada 2 horas. El aliado definitivo para mantener tu enfoque y energía al máximo.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA DE PERSONALIZACIÓN (Deseo) -->
+    <section id="personalizar" class="py-20 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Imagen Dinámica -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="relative w-full max-w-[400px] aspect-square bg-white rounded-[3rem] p-12 shadow-xl border border-brand-200/50 flex items-center justify-center">
+                        <svg id="interactive-svg-tumbler" class="w-64 h-auto drop-shadow-2xl transition-all duration-500" viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Tapa -->
+                            <rect x="55" y="10" width="90" height="25" rx="8" fill="#1e293b" />
+                            <rect x="65" y="35" width="70" height="15" fill="#475569" />
+                            <circle cx="100" cy="22.5" r="5" fill="#f8fafc" />
+                            <!-- Cuerpo -->
+                            <path id="interactive-body" d="M50 50 H150 L140 280 C138 295, 128 305, 115 305 H85 C72 305, 62 295, 60 280 L50 50 Z" fill="#c5a880" class="transition-all duration-500" />
+                            <text x="100" y="180" fill="white" font-family="Plus Jakarta Sans" font-weight="bold" font-size="14" text-anchor="middle" letter-spacing="3" opacity="0.8">AURA</text>
+                            <!-- Pantalla -->
+                            <rect x="75" y="70" width="50" height="22" rx="6" fill="#0f172a" />
+                            <text id="interactive-temp" x="100" y="86" fill="#34d399" font-family="monospace" font-weight="bold" font-size="12" text-anchor="middle">55°C</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Controles Interactivos -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-800 bg-brand-100 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Diseño a tu medida</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Encuentra tu Aura ideal</h2>
+                    <p class="text-slate-600">Nuestra paleta de colores exclusiva está inspirada en la serenidad de la naturaleza y las tendencias de diseño contemporáneo.</p>
+                    
+                    <!-- Selector de Colores -->
+                    <div class="space-y-3 pt-4">
+                        <label class="text-sm font-bold text-slate-500 uppercase tracking-wider">Elige un color:</label>
+                        <div class="flex flex-wrap gap-4">
+                            <!-- Color 1: Creamy Matcha -->
+                            <button onclick="changeColor('#c5a880', 'Creamy Matcha')" class="color-btn group relative flex items-center justify-center w-12 h-12 rounded-full border-2 border-brand-500 bg-[#c5a880] transition-transform active:scale-95 focus:outline-none">
+                                <span class="sr-only">Creamy Matcha</span>
+                                <div class="absolute inset-0.5 rounded-full border border-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </button>
+                            <!-- Color 2: Dusty Rose -->
+                            <button onclick="changeColor('#e5bfa1', 'Dusty Rose')" class="color-btn group relative flex items-center justify-center w-12 h-12 rounded-full border-2 border-transparent bg-[#e5bfa1] transition-transform active:scale-95 focus:outline-none">
+                                <span class="sr-only">Dusty Rose</span>
+                                <div class="absolute inset-0.5 rounded-full border border-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </button>
+                            <!-- Color 3: Ocean Mist -->
+                            <button onclick="changeColor('#9eb9cc', 'Ocean Mist')" class="color-btn group relative flex items-center justify-center w-12 h-12 rounded-full border-2 border-transparent bg-[#9eb9cc] transition-transform active:scale-95 focus:outline-none">
+                                <span class="sr-only">Ocean Mist</span>
+                                <div class="absolute inset-0.5 rounded-full border border-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </button>
+                            <!-- Color 4: Midnight Sage -->
+                            <button onclick="changeColor('#606c5a', 'Midnight Sage')" class="color-btn group relative flex items-center justify-center w-12 h-12 rounded-full border-2 border-transparent bg-[#606c5a] transition-transform active:scale-95 focus:outline-none">
+                                <span class="sr-only">Midnight Sage</span>
+                                <div class="absolute inset-0.5 rounded-full border border-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </button>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 pt-1">Color seleccionado: <span id="color-name-display" class="text-brand-800">Creamy Matcha</span></p>
+                    </div>
+
+                    <!-- Selector de Temperatura de Mockup -->
+                    <div class="space-y-3 pt-2">
+                        <label class="text-sm font-bold text-slate-500 uppercase tracking-wider">Simula la bebida ideal:</label>
+                        <div class="flex gap-2">
+                            <button onclick="setTemp('04°C', '#38bdf8')" class="px-4 py-2 bg-sky-50 text-sky-700 font-semibold text-xs rounded-xl border border-sky-100 hover:bg-sky-100 transition-colors">Agua Helada (4°C)</button>
+                            <button onclick="setTemp('55°C', '#34d399')" class="px-4 py-2 bg-emerald-50 text-emerald-700 font-semibold text-xs rounded-xl border border-emerald-100 hover:bg-emerald-100 transition-colors">Matcha Perfecto (55°C)</button>
+                            <button onclick="setTemp('85°C', '#f87171')" class="px-4 py-2 bg-red-50 text-red-700 font-semibold text-xs rounded-xl border border-red-100 hover:bg-red-100 transition-colors">Café Negro (85°C)</button>
+                        </div>
+                    </div>
+
+                    <!-- Botón para Comprar el Seleccionado -->
+                    <div class="pt-6">
+                        <a href="#comprar" class="inline-flex items-center justify-center gap-3 bg-brand-900 hover:bg-brand-800 text-white font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            Quiero mi <span id="cta-color-name">Creamy Matcha</span>
+                            <i data-lucide="info" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS (Prueba Social) -->
+    <section id="testimonios" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-800 bg-brand-100 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Opiniones de la Comunidad</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">Lo que dicen las personas apasionadas por el bienestar</h2>
+                <div class="flex justify-center items-center gap-1 mt-4 text-amber-500">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <span class="text-slate-600 text-sm font-semibold ml-2">4.9 promedio en tienda</span>
+                </div>
+            </div>
+
+            <!-- Grid de Testimonios Estilo Grid Pinterest / Tarjetas elegantes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            "Como mercadóloga, el diseño lo es todo. Pero que además mantenga mi matcha helado toda la tarde mientras preparo estrategias es de otro mundo. Todo el mundo me pregunta de dónde es en la oficina."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80" alt="Valeria G.">
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Valeria Gómez</h4>
+                            <p class="text-xs text-slate-400">Brand Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            "Compré el color Ocean Mist y superó mis expectativas. Lo llevo al gimnasio y a mis reuniones con clientes. El indicador de temperatura en la tapa es increíblemente útil, ya no me quemo."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80" alt="Andrés M.">
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Andrés Mendoza</h4>
+                            <p class="text-xs text-slate-400">Consultor Financiero</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            "Es la mejor compra de este año. La alarma inteligente me recuerda tomar agua mientras programo y de verdad noto la diferencia en mi energía. Además, no gotea nada de nada."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Catalina R.">
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Catalina Rojas</h4>
+                            <p class="text-xs text-slate-400">Desarrolladora Full Stack</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPRA / OFERTA ESPECIAL (Acción) -->
+    <section id="comprar" class="py-20 bg-brand-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white rounded-[2.5rem] shadow-2xl border border-brand-200 overflow-hidden grid grid-cols-1 md:grid-cols-12">
+                
+                <!-- Col Izquierda: Urgencia y Oferta -->
+                <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 bg-rose-50 text-rose-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                            <i data-lucide="flame" class="w-4 h-4 animate-pulse"></i> Oferta por tiempo limitado
+                        </div>
+                        
+                        <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Consigue tu Aura Tumbler hoy al 40% de Descuento</h2>
+                        
+                        <!-- Caja de Precio Impactante -->
+                        <div class="flex items-baseline gap-4 py-4">
+                            <span class="text-4xl md:text-5xl font-black text-slate-900">$39.99</span>
+                            <span class="text-xl text-slate-400 line-through font-medium">$66.99</span>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-2.5 py-1 rounded-lg">Ahorras $27.00</span>
+                        </div>
+
+                        <!-- Temporizador Regresivo (Desencadenante de urgencia de conversión) -->
+                        <div class="bg-brand-50 rounded-2xl p-4 border border-brand-200 flex items-center justify-between">
+                            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">La oferta termina en:</div>
+                            <div class="flex gap-2 text-slate-800 font-extrabold text-lg" id="countdown-timer">
+                                <div class="bg-white px-2 py-1 rounded-lg shadow-sm border border-brand-200/40"><span id="hours">00</span><span class="text-[10px] text-slate-400 font-bold uppercase block text-center">h</span></div>
+                                <div class="bg-white px-2 py-1 rounded-lg shadow-sm border border-brand-200/40"><span id="minutes">14</span><span class="text-[10px] text-slate-400 font-bold uppercase block text-center">m</span></div>
+                                <div class="bg-white px-2 py-1 rounded-lg shadow-sm border border-brand-200/40"><span id="seconds">59</span><span class="text-[10px] text-slate-400 font-bold uppercase block text-center">s</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Qué incluye -->
+                        <ul class="space-y-3 pt-2 text-slate-600 text-sm">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Aura Tumbler Inteligente (Color a elegir)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Cargador magnético USB premium</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Libro Digital "Recetas de Matcha & Bebidas Detox" (Valorado en $15)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> 1 Año de garantía de fábrica</li>
+                        </ul>
+                    </div>
+
+                    <!-- Garantía de Devolución -->
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100 text-xs text-slate-400">
+                        <i data-lucide="shield-check" class="w-10 h-10 text-brand-500"></i>
+                        <p>Simulador libre de riesgos. Experimenta la facilidad de nuestra interfaz de preventa premium diseñada para conversiones masivas.</p>
+                    </div>
+                </div>
+
+                <!-- Col Derecha: Tarjeta Elegante B2B / Leads Premium (Cambio solicitado) -->
+                <div class="md:col-span-5 bg-slate-50 p-8 md:p-12 border-t md:border-t-0 md:border-l border-slate-100 flex flex-col justify-between">
+                    <div class="space-y-6 my-auto">
+                        <!-- Decoración Superior -->
+                        <div class="w-12 h-12 bg-brand-200/60 text-brand-900 rounded-2xl flex items-center justify-center shadow-sm">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        
+                        <!-- Mensaje de Invitación -->
+                        <div class="space-y-3">
+                            <h3 class="text-xl font-extrabold text-slate-900 leading-snug">Conoce la experiencia Aura</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Descubre cómo Aura Tumbler puede redefinir tu rutina de hidratación diaria o cómo podemos ayudarte con pedidos exclusivos y corporativos personalizados.
+                            </p>
+                        </div>
+
+                        <!-- Botón Grande Premium "Solicitar información" -->
+                        <a href="mailto:hola@auramug.com" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 transform active:scale-95 group">
+                            <span>Solicitar información</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-brand-200 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Sellos de Confianza Corporativos -->
+                    <div class="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-slate-200/50 opacity-60">
+                        <div class="flex flex-col items-center">
+                            <i data-lucide="heart" class="w-4 h-4 text-slate-600 mb-1"></i>
+                            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Atención Premium</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i data-lucide="shield" class="w-4 h-4 text-slate-600 mb-1"></i>
+                            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Garantía Aura</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i data-lucide="globe" class="w-4 h-4 text-slate-600 mb-1"></i>
+                            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Soporte 24/7</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (Superación de Objeciones) -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <span class="text-brand-800 bg-brand-100 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Preguntas Frecuentes</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-3">Resolvemos tus dudas</h2>
+            </div>
+
+            <!-- Acordeones FAQ -->
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left font-bold text-slate-800 hover:bg-slate-50 flex items-center justify-between transition-colors">
+                        <span>¿Cómo funciona la tapa inteligente de temperatura?</span>
+                        <i id="faq-icon-1" data-lucide="plus" class="w-5 h-5 text-brand-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed">
+                        La tapa inteligente contiene un sensor de alta precisión que está en contacto con el líquido. Al dar un doble toque rápido a la pantalla táctil de la tapa, se enciende la pantalla OLED que muestra la temperatura exacta en grados Celsius. La pantalla se apaga sola a los 3 segundos para conservar batería.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left font-bold text-slate-800 hover:bg-slate-50 flex items-center justify-between transition-colors">
+                        <span>¿Cuánto tarda el envío y cuánto cuesta?</span>
+                        <i id="faq-icon-2" data-lucide="plus" class="w-5 h-5 text-brand-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed">
+                        Hoy contamos con envío gratis a toda la República. El tiempo de procesamiento es de 24 horas y los envíos tardan entre 2 a 5 días hábiles en llegar directamente a tu puerta, proporcionándote siempre un número de seguimiento.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left font-bold text-slate-800 hover:bg-slate-50 flex items-center justify-between transition-colors">
+                        <span>¿Cómo se limpia el Aura Tumbler de forma segura?</span>
+                        <i id="faq-icon-3" data-lucide="plus" class="w-5 h-5 text-brand-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed">
+                        El cuerpo de acero inoxidable es completamente resistente y se puede lavar a mano con una esponja suave y jabón para trastes común. La tapa cuenta con certificación IPX7 resistente al agua, por lo que puedes lavarla bajo el chorro de agua sin preocupaciones, pero no se recomienda sumergirla por horas ni lavarla en lavavajillas.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left font-bold text-slate-800 hover:bg-slate-50 flex items-center justify-between transition-colors">
+                        <span>¿Qué tipo de garantía ofrecen?</span>
+                        <i id="faq-icon-4" data-lucide="plus" class="w-5 h-5 text-brand-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed">
+                        Ofrecemos una garantía de satisfacción total de 30 días (si no te gusta lo regresas y te reembolsamos el 100%) y una garantía de 1 año contra cualquier defecto de fábrica en el funcionamiento de la tapa inteligente o pérdida del aislamiento térmico del termo.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-900 text-brand-100 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            
+            <!-- Marca y Eslogan -->
+            <div class="md:col-span-2 space-y-4">
+                <a href="#" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-white">
+                    <span class="bg-white text-brand-900 p-1.5 rounded-xl">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </span>
+                    Aura<span class="text-brand-200 font-light">Mug</span>
+                </a>
+                <p class="text-brand-200 text-sm max-w-sm">
+                    Fusionando el diseño premium de alta costura con tecnología del futuro para mejorar tus rituales diarios de bienestar.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-brand-500 hover:text-white transition-all flex items-center justify-center text-brand-200"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-brand-500 hover:text-white transition-all flex items-center justify-center text-brand-200"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-brand-500 hover:text-white transition-all flex items-center justify-center text-brand-200"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+
+            <!-- Navegación interna -->
+            <div class="space-y-4">
+                <h4 class="font-extrabold text-sm uppercase tracking-wider text-white">Navegación</h4>
+                <ul class="space-y-2 text-brand-200 text-sm">
+                    <li><a href="#beneficios" class="hover:text-white transition-colors">Beneficios</a></li>
+                    <li><a href="#personalizar" class="hover:text-white transition-colors">Personalizar</a></li>
+                    <li><a href="#testimonios" class="hover:text-white transition-colors">Opiniones de clientes</a></li>
+                    <li><a href="#comprar" class="hover:text-white transition-colors">Solicitar Ahora</a></li>
+                </ul>
+            </div>
+
+            <!-- Soporte & Contacto -->
+            <div class="space-y-4">
+                <h4 class="font-extrabold text-sm uppercase tracking-wider text-white">Soporte y Ventas</h4>
+                <p class="text-brand-200 text-sm">¿Dudas o pedidos corporativos?</p>
+                <a href="mailto:hola@auramug.com" class="block font-bold text-white hover:underline text-sm flex items-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4"></i> hola@auramug.com
+                </a>
+                <p class="text-brand-200 text-xs mt-2">© 2026 AuraMug Inc. Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIONES Y LÓGICA -->
+    <script>
+        // Inicializar Iconos Lucide
+        lucide.createIcons();
+
+        // Control del Selector de Color Interactivo
+        function changeColor(hexColor, colorName) {
+            // Actualizar color en el termo del héroe
+            const heroBody = document.getElementById('tumbler-body');
+            if (heroBody) heroBody.setAttribute('fill', hexColor);
+
+            // Actualizar color en el termo interactivo de en medio
+            const interactiveBody = document.getElementById('interactive-body');
+            if (interactiveBody) interactiveBody.setAttribute('fill', hexColor);
+
+            // Actualizar textos informativos
+            document.getElementById('hero-color-title').textContent = colorName;
+            document.getElementById('color-name-display').textContent = colorName;
+            document.getElementById('cta-color-name').textContent = colorName;
+
+            // Actualizar estilo visual de los botones del selector
+            const buttons = document.querySelectorAll('.color-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(hexColor)) {
+                    btn.classList.add('border-brand-500');
+                    btn.classList.remove('border-transparent');
+                } else {
+                    btn.classList.remove('border-brand-500');
+                    btn.classList.add('border-transparent');
+                }
+            });
+        }
+
+        // Control del simular de Temperatura en el Termo Interactivo
+        function setTemp(tempText, displayColor) {
+            const tempSvgElement1 = document.getElementById('tumbler-temp');
+            const tempSvgElement2 = document.getElementById('interactive-temp');
+            
+            if (tempSvgElement1) {
+                tempSvgElement1.textContent = tempText;
+                tempSvgElement1.setAttribute('fill', displayColor);
+            }
+            if (tempSvgElement2) {
+                tempSvgElement2.textContent = tempText;
+                tempSvgElement2.setAttribute('fill', displayColor);
+            }
+        }
+
+        // Animación de Contador Regresivo Realista para Conversión (Scarcity Trigger)
+        let totalSeconds = 14 * 60 + 59; // 14 minutos y 59 segundos
+        function updateCountdown() {
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+
+            if (totalSeconds <= 0) {
+                totalSeconds = 15 * 60; // Reiniciar el contador en bucle suave
+            }
+
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = Math.floor(totalSeconds % 60);
+
+            hoursElement.textContent = String(h).padStart(2, '0');
+            minutesElement.textContent = String(m).padStart(2, '0');
+            secondsElement.textContent = String(s).padStart(2, '0');
+
+            totalSeconds--;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Control de Acordeones FAQ (Superación de Objeciones)
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'minus');
+            } else {
+                content.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'plus');
+            }
+            lucide.createIcons(); // Recargar iconos para mostrar el cambio
+        }
+
+        // Efecto scroll sutil en header para diseño premium
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'bg-white/90');
+                header.classList.remove('bg-white/70');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('bg-white/70');
+            }
+        });
+    </script>
+</body>
+</html>
